@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exhibition Showcase</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
     <style>
         body {
@@ -50,8 +49,31 @@
     </style>
 </head>
 <body>
+   <title>Degree Exhibition</title>
+    <style>
+        /* General styles for the header */
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Styling the first word (Degree) */
+        h1::before {
+            content: "Degree";
+            font-family: "Bahnschrift", sans-serif;
+            margin-right: 8px; /* Adds spacing between the words */
+        }
+
+        /* Styling the second word (Exhibition) */
+        h1::after {
+            content: "Exhibition";
+            font-family: "Lucida Calligraphy", cursive;
+        }
+    </style>
+</head>
+<body>
     <header>
-        <h1>BFA Digital Arts Exhibition 2025</h1>
+        <h1></h1> <!-- Header text will be added via CSS pseudo-elements -->
     </header>
 
     <!-- Navigation bar -->
@@ -61,7 +83,6 @@
             <li><a href="exhibition.html">Exhibition Showcase</a></li>
             <li><a href="work.html">Work</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="https://github.com" target="_blank">GitHub</a></li>
         </ul>
     </nav>
 
