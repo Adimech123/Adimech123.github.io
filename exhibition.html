@@ -6,75 +6,18 @@
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
     <title>Amelie Dimech Portfolio</title>
     <style>
-  body {
+        body {
             background-color: beige;
             font-family: "Arial", sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center; /* Centers all text inside the body */
+            text-align: center;
         }
         header h1 {
             font-family: "Georgia", serif;
             margin: 30px 0;
             letter-spacing: 1px;
         }
-        nav {
-            background-color: #333;
-            padding: 10px;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin-right: 20px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-family: "Courier New", monospace;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 40px;
-            width: 70%;
-            margin: 0 auto;
-        }
-        section h2 {
-            font-family: "Courier New", monospace;
-            margin-bottom: 20px;
-        }
-        section p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            text-align: center; /* Centers the text within paragraphs */
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        footer {
-            margin: 20px 0;
-        }
-        /* Styling the first word (Degree) */
-        h1::before {
-            content: "Degree";
-            font-family: "Bahnschrift", sans-serif;
-            margin-right: 8px; /* Adds spacing between the words */
-        }
-
-        /* Styling the second word (Exhibition) */
-        h1::after {
-            content: "Exhibition";
-            font-family: "Lucida Calligraphy", cursive;
-        }
-    </style>
-</head>
-<body>
-
         nav {
             background-color: #333;
             padding: 10px;
@@ -155,7 +98,13 @@
         .carousel-buttons button:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
- 
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Degree Exhibition</h1>
+    </header>
+
     <!-- Navigation bar -->
     <nav>
         <ul>
@@ -176,9 +125,9 @@
         <!-- Carousel Section -->
         <div class="carousel">
             <div class="carousel-images">
-                <img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcGR2YW5nb2doLXNlbGYtcG9ydHJhaXQtbTAxLWpvYjY2MV8yLWwxMDBvNmVmLmpwZw.jpg" alt="Image 1">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Portrait_of_Dr._Gachet.jpg" alt="Image 2">
-                <img src="https://i.pinimg.com/474x/a2/f7/ee/a2f7ee6701aaa6294ee4c5d28370c04e.jpg" alt="Image 3">
+                <img src="image1.jpg" alt="Image 1">
+                <img src="image2.jpg" alt="Image 2">
+                <img src="image3.jpg" alt="Image 3">
             </div>
             <div class="carousel-buttons">
                 <button id="prevBtn">&lt;</button>
@@ -187,7 +136,7 @@
         </div>
     </main>
 
-
+    
     <script>
         const carouselImages = document.querySelector('.carousel-images');
         const images = document.querySelectorAll('.carousel-images img');
@@ -219,28 +168,6 @@
     </script>
 </body>
 </html>
-
-
-    <main>
-        <section id="about">
-            <h2>Leah Camilleri</h2>
-            <p>Leah's work focuses on mixed media and the relationship between canvas and media. Her work plays with the idea of what defines an artistic medium, employing unusual materials in her art to push this boundary.</p>
-        </section>
-
-        <!-- Carousel Section -->
-        <div class="carousel">
-            <div class="carousel-images">
-                <img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcGR2YW5nb2doLXNlbGYtcG9ydHJhaXQtbTAxLWpvYjY2MV8yLWwxMDBvNmVmLmpwZw.jpg" alt="Image 1">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Portrait_of_Dr._Gachet.jpg" alt="Image 2">
-                <img src="https://i.pinimg.com/474x/a2/f7/ee/a2f7ee6701aaa6294ee4c5d28370c04e.jpg" alt="Image 3">
-            </div>
-            <div class="carousel-buttons">
-                <button id="prevBtn">&lt;</button>
-                <button id="nextBtn">&gt;</button>
-            </div>
-        </div>
-    </main>
-
 
     <script>
         const carouselImages = document.querySelector('.carousel-images');
