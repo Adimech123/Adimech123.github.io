@@ -1,112 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to external CSS -->
     <style>
-        body {
-            background-color: #a5c8c4;
-            font-family: "Arial", sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center; /* Centers all text inside the body */
-        }
+      body {
+        background-color: beige;
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center; /* Centers all text inside the body */
+      }
+      main {
+        position: relative;
+        z-index: 1;
+      }
+      <img src="Artboard 1.png" > header h1 {
+        font-family: "Georgia", serif;
+        margin: 30px 0;
+        letter-spacing: 1px;
+      }
+      nav {
+        position: relative;
+        z-index: 1;
+        background-color: #333;
+        padding: 10px;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        margin-right: 20px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-family: "Courier New", monospace;
+      }
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
 
-        header h1 {
-            font-family: "Georgia", serif;
-            margin: 30px 0;
-            letter-spacing: 1px;
-            color: #d26d54; /* Header text color updated here */
-        }
+      section {
+        padding: 40px;
+        width: 70%;
+        margin: 0 auto;
+      }
+      section h2 {
+        font-family: "Courier New", monospace;
+        margin-bottom: 20px;
+      }
+      section p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        text-align: center; /* Centers the text within paragraphs */
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      footer {
+        margin: 20px 0;
+      }
 
-        nav {
-            background-color: #333;
-            padding: 10px;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin-right: 20px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-family: "Courier New", monospace;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
+      /* Styling the first word (Degree) */
+      h1::before {
+        content: "Degree";
+        font-family: "Bahnschrift", sans-serif;
+        margin-right: 8px; /* Adds spacing between the words */
+      }
 
-        section {
-            padding: 40px;
-            width: 70%;
-            margin: 0 auto;
-        }
-        section h2 {
-            font-family: "Courier New", monospace;
-            margin-bottom: 20px;
-            color: #d26d54;
-        }
-        section p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            text-align: center; /* Centers the text within paragraphs */
-            max-width: 800px;
-            margin: 0 auto;
-        }
+      /* Styling the second word (Exhibition) */
+      h1::after {
+        content: "Exhibition";
+        font-family: "Lucida Calligraphy", cursive;
+      }
 
-        footer {
-            margin: 20px 0;
-        }
+      .squiggle {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0px;
+        left: 0;
+        overflow: hidden;
+      }
 
-        /* Styling the first word (Degree) */
-        h1::before {
-            content: "Degree";
-            font-family: "Bahnschrift", sans-serif;
-            margin-right: 8px; /* Adds spacing between the words */
-        }
-
-        /* Styling the second word (Exhibition) */
-        h1::after {
-            content: "Exhibition";
-            font-family: "Lucida Calligraphy", cursive;
-        }
+      #squiggle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="squiggle">
+      <img draggable="false" id="squiggle" src="Squiggle.png" alt="squiggle" />
+    </div>
     <header>
-        <h1></h1> <!-- Header text will be added via CSS pseudo-elements -->
+      <h1></h1>
+      <!-- Header text will be added via CSS pseudo-elements -->
     </header>
 
     <!-- Navigation bar -->
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="exhibition.html">Exhibition Showcase</a></li>
-            <li><a href="sponsors.html">Sponsors</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="exhibition.html">Exhibition Showcase</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
 
     <!-- Page content -->
     <main>
-        <section id="about">
-            <h2>About the Exhibition</h2>
-            <p>Welcome to the degree exhibition 2025, a culmination of years of study, experimentation, and growth. This exhibition showcases a selection of the most significant works, reflecting the students' artistic journey through the years. Each piece explores a unique blend of concepts, techniques, and personal influences, offering a glimpse into their creative process and the themes that have shaped their practice. From thought-provoking designs to immersive visual experiences, this collection aims to engage, inspire, and invite conversation. We are excited to share these works with you and hope you find something that resonates with you.</p>
-        </section>
+      <section id="about">
+        <h2>About the Exhibition</h2>
+        <p>
+          Welcome to the degree exhibition 2025, a culmination of years of
+          study, experimentation, and growth. This exhibition showcases a
+          selection of the most significant works, reflecting the students'
+          artistic journey through the years. Each piece explores a unique blend
+          of concepts, techniques, and personal influences, offering a glimpse
+          into their creative process and the themes that have shaped their
+          practice. From thought-provoking designs to immersive visual
+          experiences, this collection aims to engage, inspire, and invite
+          conversation. We are excited to share these works with you and hope
+          you find something that resonates with you.
+        </p>
+      </section>
 
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <p>Amelie Dimech<br>Leah Camilleri</p>
-        </section>
+      <section id="projects">
+        <h2>Featured Projects</h2>
+        <p>Amelie Dimech<br />Leah Camilleri</p>
+      </section>
     </main>
-
-    <img src="Squiggle.png" alt="squiggle">
-</body>
+  </body>
 </html>
