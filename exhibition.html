@@ -64,9 +64,9 @@
         }
         .carousel {
             display: flex;
-            width: 80%;
-            height: auto;
-            max-width: 600px;
+            width: 100%;
+            height: 600px;
+            max-width: 500px;
             margin: 20px auto;
             position: relative;
             overflow: hidden;
@@ -79,7 +79,6 @@
         }
         .carousel-images img {
             width: 100%;
-            height: 750px;
             border-radius: 10px;
         }
         .carousel-buttons {
@@ -89,7 +88,7 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
-            padding: 0 10px;
+            padding: 0 0px;
         }
         .carousel-buttons button {
             background-color: rgba(0, 0, 0, 0.5);
@@ -121,15 +120,19 @@
         }
 
         .middleImage{
-            margin-left: 0.25vw;
+            margin-left: 0.3vw;
         }
 
         .lastImage{
+            margin-left: 1.7vw !important;
+        }
+
+        .middleImage2{
             margin-left: 0.75vw !important;
         }
 
         .lastImage2{
-            margin-left: 3.25vw !important;
+            margin-left: 4vw !important;
         }
     </style>
 </head>
@@ -163,7 +166,7 @@
         <div class="carousel" id="carousel1">
             <div class="carousel-images">
                 <img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcGR2YW5nb2doLXNlbGYtcG9ydHJhaXQtbTAxLWpvYjY2MV8yLWwxMDBvNmVmLmpwZw.jpg" alt="Image 1">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Portrait_of_Dr._Gachet.jpg" alt="Image 2">
+                <img class="middleImage" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Portrait_of_Dr._Gachet.jpg" alt="Image 2">
                 <img class="lastImage" src="https://i.pinimg.com/474x/a2/f7/ee/a2f7ee6701aaa6294ee4c5d28370c04e.jpg" alt="Image 3">
             </div>
             <div class="carousel-buttons">
@@ -183,7 +186,7 @@
         <div class="carousel" id="carousel2">
             <div class="carousel-images">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Rembrandt_Self-portrait_%28Kenwood%29.jpg/250px-Rembrandt_Self-portrait_%28Kenwood%29.jpg" alt="Image 4">
-                <img class="middleImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxvGcbBKzVHl5Ts8Cg2OVzD920DC7J8DsNsQ&s" alt="Image 5">
+                <img class="middleImage2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxvGcbBKzVHl5Ts8Cg2OVzD920DC7J8DsNsQ&s" alt="Image 5">
                 <img class="lastImage2" src="https://i.pinimg.com/236x/e4/29/cc/e429ccee0a141256698df215bdbac650.jpg" alt="Image 6">
             </div>
             <div class="carousel-buttons">
