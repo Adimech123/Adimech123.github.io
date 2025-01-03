@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css">
     <title>Amelie Dimech Portfolio</title>
     <style>
         body {
@@ -55,7 +55,6 @@
         section p {
             font-size: 1.2em;
             line-height: 1.6;
-            text-align: center;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -122,100 +121,75 @@
             <p>Amelie's work focuses on mixed media and the relationship between canvas and media. Her work plays with the idea of what defines an artistic medium, employing unusual materials in her art to push this boundary.</p>
         </section>
 
-        <!-- Carousel Section -->
-        <div class="carousel">
+        <!-- First Carousel -->
+        <div class="carousel" id="carousel1">
             <div class="carousel-images">
                 <img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcGR2YW5nb2doLXNlbGYtcG9ydHJhaXQtbTAxLWpvYjY2MV8yLWwxMDBvNmVmLmpwZw.jpg" alt="Image 1">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Portrait_of_Dr._Gachet.jpg" alt="Image 2">
                 <img src="https://i.pinimg.com/474x/a2/f7/ee/a2f7ee6701aaa6294ee4c5d28370c04e.jpg" alt="Image 3">
             </div>
             <div class="carousel-buttons">
-                <button id="prevBtn">&lt;</button>
-                <button id="nextBtn">&gt;</button>
+                <button id="prevBtn1">&lt;</button>
+                <button id="nextBtn1">&gt;</button>
             </div>
         </div>
-    </main>
 
-     <main>
+         <main>
         <section id="about">
             <h2>Leah Camilleri</h2>
             <p>Leah's work focuses on mixed media and the relationship between canvas and media. Her work plays with the idea of what defines an artistic medium, employing unusual materials in her art to push this boundary.</p>
         </section>
-    <script>
-        const carouselImages = document.querySelector('.carousel-images');
-        const images = document.querySelectorAll('.carousel-images img');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        let currentIndex = 0;
-
-        function updateCarousel() {
-            const width = images[0].clientWidth;
-            carouselImages.style.transform = `translateX(${-currentIndex * width}px)`;
-        }
-
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % images.length;
-            updateCarousel();
-        });
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            updateCarousel();
-        });
-
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % images.length;
-            updateCarousel();
-        }, 5000);
-
-        window.addEventListener('resize', updateCarousel);
-    </script>
-</body>
-</html>
-
-    <script>
-        const carouselImages = document.querySelector('.carousel-images');
-        const images = document.querySelectorAll('.carousel-images img');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        let currentIndex = 0;
-
-        function updateCarousel() {
-            const width = images[0].clientWidth;
-            carouselImages.style.transform = `translateX(${-currentIndex * width}px)`;
-        }
-
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % images.length;
-            updateCarousel();
-        });
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            updateCarousel();
-        });
-
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % images.length;
-            updateCarousel();
-        }, 5000);
-
-        window.addEventListener('resize', updateCarousel);
 
 
-         <div class="carousel">
+        <!-- Second Carousel -->
+        <div class="carousel" id="carousel2">
             <div class="carousel-images">
-                <img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcGR2YW5nb2doLXNlbGYtcG9ydHJhaXQtbTAxLWpvYjY2MV8yLWwxMDBvNmVmLmpwZw.jpg" alt="Image 1">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Portrait_of_Dr._Gachet.jpg" alt="Image 2">
-                <img src="https://i.pinimg.com/474x/a2/f7/ee/a2f7ee6701aaa6294ee4c5d28370c04e.jpg" alt="Image 3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Rembrandt_Self-portrait_%28Kenwood%29.jpg/250px-Rembrandt_Self-portrait_%28Kenwood%29.jpg" alt="Image 4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxvGcbBKzVHl5Ts8Cg2OVzD920DC7J8DsNsQ&s" alt="Image 5">
+                <img src="https://i.pinimg.com/236x/e4/29/cc/e429ccee0a141256698df215bdbac650.jpg" alt="Image 6">
             </div>
             <div class="carousel-buttons">
-                <button id="prevBtn">&lt;</button>
-                <button id="nextBtn">&gt;</button>
+                <button id="prevBtn2">&lt;</button>
+                <button id="nextBtn2">&gt;</button>
             </div>
         </div>
     </main>
 
+
+    <script>
+        function setupCarousel(carouselId, prevBtnId, nextBtnId) {
+            const carousel = document.querySelector(`#${carouselId} .carousel-images`);
+            const images = document.querySelectorAll(`#${carouselId} .carousel-images img`);
+            const prevBtn = document.getElementById(prevBtnId);
+            const nextBtn = document.getElementById(nextBtnId);
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                const width = images[0].clientWidth;
+                carousel.style.transform = `translateX(${-currentIndex * width}px)`;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateCarousel();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateCarousel();
+            });
+
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateCarousel();
+            }, 5000);
+
+            window.addEventListener('resize', updateCarousel);
+        }
+
+        // Setup carousels
+        setupCarousel('carousel1', 'prevBtn1', 'nextBtn1');
+        setupCarousel('carousel2', 'prevBtn2', 'nextBtn2');
     </script>
 </body>
 </html>
