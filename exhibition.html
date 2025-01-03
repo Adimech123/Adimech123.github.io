@@ -14,7 +14,7 @@
             text-align: center;
         }
         header h1 {
-            font-family: "Georgia", serif;
+            font-family: "Bahnschrift", sans-serif;
             margin: 30px 0;
             letter-spacing: 1px;
         }
@@ -102,7 +102,18 @@
 </head>
 <body>
     <header>
-        <h1>Degree Exhibition</h1>
+               /* Styling the first word (Degree) */
+        h1::before {
+            content: "Degree";
+            font-family: "Bahnschrift", sans-serif;
+            margin-right: 8px; /* Adds spacing between the words */
+        }
+
+        /* Styling the second word (Exhibition) */
+        h1::after {
+            content: "Exhibition";
+            font-family: "Lucida Calligraphy", cursive;
+
     </header>
 
     <!-- Navigation bar -->
