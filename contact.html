@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to external CSS -->
+    <style>
+      body {
+        background-color: beige;
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center; /* Centers all text inside the body */
+      }
+      main {
+        position: relative;
+        z-index: 1;
+      }
+      <img src="Artboard 1.png" > header h1 {
+        font-family: "Georgia", serif;
+        margin: 30px 0;
+        letter-spacing: 1px;
+      }
+      nav {
+        position: relative;
+        z-index: 1;
+        background-color: #333;
+        padding: 10px;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        margin-right: 20px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-family: "Courier New", monospace;
+      }
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
+
+      section {
+        padding: 40px;
+        width: 70%;
+        margin: 0 auto;
+      }
+      section h2 {
+        font-family: "Courier New", monospace;
+        margin-bottom: 20px;
+      }
+      section p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        text-align: center; /* Centers the text within paragraphs */
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      footer {
+        margin: 20px 0;
+      }
+
+      /* Styling the first word (Degree) */
+      h1::before {
+        content: "Degree";
+        font-family: "Bahnschrift", sans-serif;
+        margin-right: 8px; /* Adds spacing between the words */
+      }
+
+      /* Styling the second word (Exhibition) */
+      h1::after {
+        content: "Exhibition";
+        font-family: "Lucida Calligraphy", cursive;
+      }
+
+      .squiggle {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0px;
+        left: 0;
+        overflow: hidden;
+      }
+
+      #squiggle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+        max-width: 600px;
+      }
+      .contact-form h2 {
+        margin-bottom: 20px;
+        font-size: 36px;
+        color: #333;
+      }
+      .contact-form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+      .contact-form input {
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 4px;
+        font-size: 16px;
+        padding: 10px 0;
+        margin-bottom: 20px;
+      }
+
+      .contact-form button {
+        width: 10vw;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+      .contact-form button {
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+      }
+      .contact-form button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="squiggle">
+      <img draggable="false" id="squiggle" src="Squiggle.png" alt="squiggle" />
+    </div>
+    <header>
+      <h1></h1>
+      <!-- Header text will be added via CSS pseudo-elements -->
+    </header>
+
+    <!-- Navigation bar -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="exhibition.html">Exhibition Showcase</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Page content -->
+    <main>
+      <section class="contact-form">
+        <h2>Contact</h2>
+        <form action="/submit" method="post">
+          <label for="name">First Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your first name"
+            required
+          />
+
+          <label for="surname">Surname</label>
+          <input
+            type="text"
+            id="surname"
+            name="surname"
+            placeholder="Your surname"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email"
+            required
+          />
+
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Subject"
+            required
+          />
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
